@@ -286,3 +286,67 @@ img {
 .socials-footer-item:not(:last-child) {
   margin-right: 10px;
 }
+
+/*Send-footer */
+
+.send-footer {
+  margin-left: auto;
+}
+
+.input-send {
+  width: 358px;
+  height: 50px;
+  padding: 0px 16px;
+  margin-right: 12px;
+
+  color: var(--light-text-color);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+}
+
+.input-send::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: var(--light-text-color);
+}
+
+.btn-send {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  padding: 10px 0px;
+
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  border: none;
+  color: var(--primary-white-color);
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
+}
+
+.btn-send::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  margin-left: 15px;
+
+  background-image: url("../images/icones/icon-send.svg");
+}
+
+.btn-send:hover,
+.btn-send:focus {
+  background-color: #188ce8;
+}
