@@ -41,6 +41,7 @@
 .modal {
   width: 528px;
   height: 581px;
+  padding: 40px;
 
   border-radius: 4px;
   background-color: var(--primary-white-color);
@@ -70,6 +71,12 @@
 .icon-close {
   width: 11px;
   height: 11px;
+
+  transition: fill 250ms var(--timing-function);
+}
+.close-btn:hover .icon-close,
+.close-btn:focus .icon-close {
+  fill: var(--accent-color);
 }
 
 /* Hero */
@@ -77,8 +84,7 @@
 .hero {
   max-width: 1600px;
   height: 600px;
-  margin: 80px auto 0px auto;
-  /*margin-top: 80px;*/
+  margin: 80px auto 0px;
   padding: 200px 0px;
 
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner.jpg");
@@ -99,7 +105,8 @@
   text-transform: uppercase;
 }
 
-.modal-btn {
+.modal-btn,
+.modal-send {
   min-width: 200px;
   border-radius: 4px;
   border: 0px;
@@ -115,12 +122,18 @@
   letter-spacing: 0.06em;
 
   cursor: pointer;
-  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), outline 250ms var(--timing-function);
 }
 
 .modal-btn:hover,
-.modal-btn:focus {
+.modal-btn:focus,
+.modal-send:hover,
+.modal-send:focus {
   background-color: #188ce8;
+}
+
+.modal-send {
+  align-self: center;
 }
 
 /* ====== SECTION ====== */
@@ -347,6 +360,136 @@
 .client-item:focus .link {
   border: 1px solid var(--accent-color);
   fill: var(--accent-color);
+}
+
+/* Modal form */
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-text {
+  margin: 0px 0px 12px 0px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: var(--title-text-color);
+}
+
+.modal-field {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--paragraph-text-color);
+}
+
+.modal-form-wrraper {
+  display: block;
+  position: relative;
+  margin: 4px 0px 10px 0px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-input:focus,
+.modal-comment:focus {
+  outline: none;
+  border: 1px solid var(--accent-color);
+  transition: border 250ms var(--timing-function);
+}
+
+.modal-comment {
+  width: 100%;
+  height: 120px;
+  margin: 4px 0px 20px 0px;
+  padding: 15px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+}
+
+.modal-comment::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+
+  width: 18px;
+  height: 18px;
+}
+
+.modal-input:focus + .modal-icon {
+  fill: var(--accent-color);
+  transition: fill 250ms var(--timing-function);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin: 0px auto 30px;
+}
+
+.checkbox-policy {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.icon-policy {
+  display: block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+}
+
+.checkbox-policy:focus + .icon-policy {
+  outline: 1px solid var(--accent-color);
+}
+
+.checkbox-policy:checked + .icon-policy {
+  background-color: var(--accent-color);
+  background-image: url("../images/icones/icon-check.svg");
+  background-size: contain;
+  background-origin: border-box;
+
+  border-color: var(--accent-color);
+}
+
+.text-policy {
+  line-height: 1.71;
+
+  color: var(--paragraph-text-color);
+}
+
+.text-policy-accent {
+  color: var(--accent-color);
 }
 
 /* ====== Стили для portfolio.html ====== */

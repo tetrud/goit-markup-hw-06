@@ -378,8 +378,55 @@
             <use href="./images/icones/sprite.svg#icon-close"></use>
           </svg>
         </button>
+        <form action="#" class="modal-form">
+          <p class="modal-text">Оставьте свои данные, мы вам перезвоним</p>
+
+          <label class="modal-field">
+            Имя
+            <span class="modal-form-wrraper">
+              <input type="text" name="user-name" class="modal-input" required />
+              <svg class="modal-icon">
+                <use href="./images/icones/sprite.svg#icon-person"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label class="modal-field">
+            Телефон
+            <span class="modal-form-wrraper">
+              <input type="tel" name="user-tel" class="modal-input" required />
+              <svg class="modal-icon">
+                <use href="./images/icones/sprite.svg#icon-phone"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label class="modal-field">
+            Почта
+            <span class="modal-form-wrraper">
+              <input type="email" name="user-email" class="modal-input" />
+              <svg class="modal-icon">
+                <use href="./images/icones/sprite.svg#icon-email"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label class="modal-field">
+            Комментарий
+            <textarea name="user-comment" class="modal-comment" placeholder="Введите текст"></textarea>
+          </label>
+
+          <label class="checkbox-label">
+            <input type="checkbox" name="user-policy" value="accept-policy" class="checkbox-policy" />
+            <span class="icon-policy"></span>
+            <span class="text-policy">Соглашаюсь с рассылкой и принимаю <a href="" class="text-policy-accent">Условия договора</a></span>
+          </label>
+
+          <button type="submit" class="modal-send">Отправить</button>
+        </form>
       </div>
     </div>
+
     <script src="./js/modal.js"></script>
   </body>
 </html>
