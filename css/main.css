@@ -501,26 +501,37 @@
   padding: 94px 0px;
 }
 
-.filter-box {
+/* RadioButton */
+
+.portfolio-form {
   display: flex;
   justify-content: center;
 }
 
-.filter-list {
+.portfolio-list {
   margin-bottom: 50px;
 }
 
-.filter-item {
+.portfolio-item {
   display: inline;
 }
 
-.filter-item:not(:last-child) {
+.portfolio-item:not(:last-child) {
   margin-right: 8px;
 }
 
-/* Button */
+.portfolio-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
-.btn-filter {
+.portfolio-label {
   padding: 6px 22px;
   border-radius: 4px;
   border: 0;
@@ -533,13 +544,16 @@
   line-height: 1.62;
   letter-spacing: inherit;
 
-  cursor: pointer;
-
   transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 
-.btn-filter:hover,
-.btn-filter:focus {
+.portfolio-label:hover,
+.portfolio-label:focus {
+  background-color: var(--accent-color);
+  color: var(--secondary-text-color);
+}
+
+.portfolio-input:checked + .portfolio-label {
   background-color: var(--accent-color);
   color: var(--secondary-text-color);
 }

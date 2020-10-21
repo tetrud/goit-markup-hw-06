@@ -41,16 +41,36 @@
     <main>
       <!-- Portfolio -->
       <section class="section section-portfolio">
-        <h1 class="section-title visually-hidden">Наши работы</h1>
-        <div class="filter-box">
-          <ul class="filter-list list">
-            <li class="filter-item"><button type="button" class="btn-filter">Все</button></li>
-            <li class="filter-item"><button type="button" class="btn-filter">Веб-сайты</button></li>
-            <li class="filter-item"><button type="button" class="btn-filter">Приложения</button></li>
-            <li class="filter-item"><button type="button" class="btn-filter">Дизайн</button></li>
-            <li class="filter-item"><button type="button" class="btn-filter">Маркетинг</button></li>
+        <h1 class="portfolio-title visually-hidden">Наши работы</h1>
+        <form class="portfolio-form">
+          <ul class="portfolio-list list">
+            <li class="portfolio-item">
+              <input class="portfolio-input" id="radio-1" type="radio" name="option" value="choice-option" checked />
+              <label class="portfolio-label" for="radio-1">Все</label>
+            </li>
+
+            <li class="portfolio-item">
+              <input class="portfolio-input" id="radio-2" type="radio" name="option" value="choice-option" />
+              <label class="portfolio-label" for="radio-2">Веб-сайты</label>
+            </li>
+
+            <li class="portfolio-item">
+              <input class="portfolio-input" id="radio-3" type="radio" name="option" value="choice-option" />
+              <label class="portfolio-label" for="radio-3">Приложения</label>
+            </li>
+
+            <li class="portfolio-item">
+              <input class="portfolio-input" id="radio-4" type="radio" name="option" value="choice-option" />
+              <label class="portfolio-label" for="radio-4">Дизайн</label>
+            </li>
+
+            <li class="portfolio-item">
+              <input class="portfolio-input" id="radio-5" type="radio" name="option" value="choice-option" />
+              <label class="portfolio-label" for="radio-5">Маркетинг</label>
+            </li>
           </ul>
-        </div>
+        </form>
+
         <div class="card-box conteiner">
           <ul class="card list">
             <li class="card-content">
